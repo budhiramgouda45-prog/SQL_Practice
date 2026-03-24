@@ -46,7 +46,7 @@ GROUP BY
     c.last_name
 ORDER BY total_sales DESC;
 
-
+```
 ### 1. Find Total Revenue per Customer
 This query calculates **total revenue for each customer** by joining the `customers`, `sales`, and `products` tables.
 
