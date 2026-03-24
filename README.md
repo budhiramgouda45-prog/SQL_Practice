@@ -48,7 +48,7 @@ GROUP BY
 ORDER BY total_sales DESC;
 
 ```
-### Find Total Sales per Product Category
+### 2.Find Total Sales per Product Category
 This query calculates the **total sales** per category
 ```sql
 select 
@@ -60,7 +60,7 @@ group by p.category
 order by total_sales desc
 
 ```
-### Show Running Total of Monthly Sales
+### 3.Show Running Total of Monthly Sales
 This query calculates the **running total** of the month
 ```sql
 select 
@@ -77,7 +77,7 @@ on s.product_id=p.product_id
 group by datename(month,s.sale_date),month(s.sale_date)
 )t
 ```
-###  Calculate month-over-month growth in sales
+### 4. Calculate month-over-month growth in sales
 This query calculates the month over month growth %
 ```sql
 with overview as 
