@@ -1,4 +1,4 @@
-# Superstore Sales Analysis using SQL Server 🗄️
+# Superstore Sales Analysis using SQL Server 
 
 ## About the Project
 I analyzed a **Superstore sales dataset** using SQL Server to understand **sales trends, top customers, and product performance**.  
