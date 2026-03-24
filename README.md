@@ -17,7 +17,7 @@ I have 3 Table first is the customers,sales and products .
 #Solution
 To solve this i analyzed the  the data using sql server .
 
-``
+```sql```
 1.Find total revenue per customer
 select c.customer_id,
 c.first_name,
@@ -31,4 +31,3 @@ group by c.customer_id,
 c.first_name,
 c.last_name
 order by total_sales desc
-``
