@@ -105,7 +105,7 @@ pm_sales,
 convert(decimal(10,2),((current_sales-pm_sales)*100.0/pm_sales)) as mom_growth 
 from details 
 ```
-###Insights
+#Insights
 
 1. Top 5 customers account for 40% of total sales, highlighting key clients for targeted marketing.
 2. Electronics generate the highest revenue, followed by Furniture and Clothing, showing which categories drive business.
