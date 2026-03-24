@@ -19,6 +19,8 @@ To solve this i analyzed the  the data using sql server .
 
 ```sql
 1.Find total revenue per customer
+
+
 select c.customer_id,
 c.first_name,
 c.last_name,
