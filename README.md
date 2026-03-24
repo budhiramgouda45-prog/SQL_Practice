@@ -33,3 +33,6 @@ group by c.customer_id,
 c.first_name,
 c.last_name
 order by total_sales desc
+
+here i analyzed the customer wise information .
+here i found the top customers based on sales.
