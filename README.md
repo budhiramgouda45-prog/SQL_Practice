@@ -48,3 +48,48 @@ order by total_sales desc
 
 i analyzed the category-wise sales .
 here i found that the Electronics category generating the highest revenue followed by Furniture and Clothing
+
+3.Show running total of monthly sales
+i found the month-wise running total .
+select 
+month_number,
+month_name,
+current_sales,
+sum(current_sales) over(order by month_number) as running_sales from 
+(select 
+month(s.sale_date) as month_number,
+datename(month,s.sale_date) as month_name,
+sum(s.quantity*p.price) as current_sales 
+from sales s left join products p 
+on s.product_id=p.product_id 
+group by datename(month,s.sale_date),month(s.sale_date)
+)t
+
+
+4.i analyzed the month over month growth %
+with overview as 
+(
+select 
+month(s.sale_date) as month_number,
+datename(month,s.sale_date) as month_name,
+sum(s.quantity*p.price) as current_sales 
+from sales s left join products p 
+on s.product_id=p.product_id 
+group by datename(month,s.sale_date),month(s.sale_date)
+),
+details as 
+(
+select
+month_number,
+month_name,
+current_sales,
+lag(current_sales) over(order by month_number) as pm_sales from overview)
+select 
+month_number,
+month_name,
+current_sales,
+pm_sales,
+convert(decimal(10,2),((current_sales-pm_sales)*100.0/pm_sales)) as mom_growth 
+from details 
+
+
