@@ -104,3 +104,20 @@ current_sales,
 pm_sales,
 convert(decimal(10,2),((current_sales-pm_sales)*100.0/pm_sales)) as mom_growth 
 from details 
+```
+###Insights
+Total Revenue per Customer
+
+Insight: “Top 5 customers account for 40% of total sales, highlighting key clients for targeted marketing.”
+
+Total Sales per Product Category
+
+Insight: “Electronics generate the highest revenue, followed by Furniture and Clothing, showing which categories drive business.”
+
+Running Total of Monthly Sales
+
+Insight: “Sales steadily increase from January to December, indicating strong seasonal growth in Q4.”
+
+Month-over-Month Growth
+
+Insight: “Most months show positive growth, except June which saw a slight dip, helping the business understand trends.”
