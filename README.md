@@ -35,4 +35,16 @@ c.last_name
 order by total_sales desc
 
 here i analyzed the customer wise information .
-here i found the top customers based on sales.
+
+
+2. Find total sales per product category
+select 
+p.category,
+coalesce(sum(s.quantity*p.price),0) as total_sales 
+from products p left join sales s 
+on p.product_id=s.product_id 
+group by p.category
+order by total_sales desc
+
+i analyzed the category-wise sales .
+here i found that the Electronics category generating the highest revenue followed by Furniture and Clothing
